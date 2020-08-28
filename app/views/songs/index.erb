@@ -1,0 +1,9 @@
+<p>My Song</p>
+
+<div>
+<% @songs.map do |song|%><br>
+<%=link_to song.name, song_path(song)%>
+</div>
+    <%end%>
+
+
