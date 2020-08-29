@@ -1,0 +1,13 @@
+<h1>Artist Name: <%=@artist.name%></h1>
+<p>Bio: <%=@artist.bio %></p>
+
+SONG:
+<ul>
+<%@artist.songs.each do |song|%>
+<li><%= song.name%></li>
+<%end%>
+</ul>
+
+<%= button_to "say bye to #{@artist.name}", @artist, :method => :delete %>
+<br>
+<%= button_to "Home Page", artists_path, :method => :get %>

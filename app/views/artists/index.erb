@@ -1,0 +1,8 @@
+<h1>Artist List</h1>
+<ul>
+<% @artists.each do |artist|%>
+<li><%=link_to artist.name, artist_path(artist)%>: <%=artist.bio%></li>
+<%end%>
+</ul>
+<%= image_tag ("img.jpeg") %>
+<%= button_to "create new", new_artist_path, :method => :get %> 
